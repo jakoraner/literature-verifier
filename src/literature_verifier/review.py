@@ -87,28 +87,28 @@ def render_page(pdf: Path, page: int, dest: Path) -> bool:
 
 
 def match_words(words: list[Word], excerpt: str) -> list[Word]:
-    """The words of ``excerpt`` (each '...'-separated part as a contiguous run) on the page."""
-    toks: list[tuple[str, list[int]]] = []  # folded token, indices of the words it came from
-    i = 0
-    while i < len(words):  # join end-of-line hyphenation: "recog-" + "nition"
-        w, idx = words[i].text, [i]
-        while w.endswith("-") and i + 1 < len(words):
-            i += 1
-            w, idx = w[:-1] + words[i].text, [*idx, i]
-        toks.extend((t, idx) for t in fold(w).split())
-        i += 1
-    flat = [t for t, _ in toks]
+    """The words holding ``excerpt`` on the page ('...'-separated parts in order).
+
+    Matching runs on the folded text with all whitespace removed and a trailing hyphen
+    dropped from each word, so drop caps ("S ciPy") and hyphenated line breaks match.
+    """
+    chars: list[str] = []
+    owner: list[int] = []
+    for i, w in enumerate(words):
+        t = w.text[:-1] if w.text.endswith("-") else w.text
+        f = fold(t).replace(" ", "")
+        chars.append(f)
+        owner.extend([i] * len(f))
+    text = "".join(chars)
     hits: set[int] = set()
     pos = 0
     for part in _parts(excerpt):
-        pt = part.split()
-        found = next((s for s in range(pos, len(flat) - len(pt) + 1)
-                      if flat[s : s + len(pt)] == pt), -1)
-        if found < 0:
+        p = part.replace(" ", "")
+        k = text.find(p, pos)
+        if k < 0:
             return []
-        for k in range(found, found + len(pt)):
-            hits.update(toks[k][1])
-        pos = found + len(pt)
+        hits.update(owner[k : k + len(p)])
+        pos = k + len(p)
     return [words[i] for i in sorted(hits)]
 
 

@@ -107,9 +107,12 @@ def cmd_meta(p: Project, a: argparse.Namespace) -> int:
     keys = sorted(p.bib) if a.all else sorted(p.cited_keys())
     rows = M.audit(p.http, keys, p.bib, M.load(p.cfg.metadata_path), offline=a.offline)
     M.save(p.cfg.metadata_path, rows)
+    def short(v: str) -> str:
+        return v if len(v) <= 80 else v[:77] + "..."
+
     for r in M.open_items(rows):
-        print(f"  {r['status']:5s} {r['key']} {r['field']}: {r['detail'] or ''} "
-              f"[bib {r['bib']!r} | pub {r['publisher']!r}]")
+        print(f"  {r['status']:5s} {r['key']} {r['field']}: {short(r['detail'])} "
+              f"[bib {short(r['bib'])!r} | pub {short(r['publisher'])!r}]")
     bad = len({r["key"] for r in M.open_items(rows)})
     print(f"audited {len(keys)} keys ({p.http.requests_made} requests, rest cached); "
           f"{bad} keys with open items -> {p.cfg.rel(p.cfg.metadata_path)}")

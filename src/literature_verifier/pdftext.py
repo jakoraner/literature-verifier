@@ -6,7 +6,8 @@ A citation records two page numbers: ``page``, as printed on the page (what a re
 up), and ``pdf_page``, the 1-based index in the file (what this module opens). When the PDF
 defines page labels, the printed page alone is enough to find the index. The excerpt may
 elide text with "..." or "…"; the parts must appear in order on the page. Matching ignores case,
-diacritics, punctuation, whitespace and end-of-line hyphenation.
+diacritics, punctuation, all whitespace (so drop caps such as "S ciPy" match) and
+end-of-line hyphenation.
 
 A page with no extractable text (an image-only scan) returns ``status="no_text"``: the
 excerpt must then be transcribed from the page image and recorded with ``--scan``.
@@ -14,11 +15,14 @@ excerpt must then be transcribed from the page image and recorded with ``--scan`
 
 from __future__ import annotations
 
+import logging
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
 from .bib import fold
+
+logging.getLogger("pypdf").setLevel(logging.ERROR)  # font warnings are noise here
 
 
 @dataclass
@@ -40,6 +44,9 @@ def _parts(excerpt: str) -> list[str]:
 
 
 def _contains(page_text: str, parts: list[str]) -> bool:
+    """Parts in order, ignoring whitespace (drop caps, broken word spacing in old PDFs)."""
+    page_text = page_text.replace(" ", "")
+    parts = [p.replace(" ", "") for p in parts]
     pos = 0
     for p in parts:
         i = page_text.find(p, pos)
