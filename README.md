@@ -51,7 +51,7 @@ Requires Python 3.11+. Page images on the review page need poppler (`pdftoppm`,
 `pdftotext`; `brew install poppler`, `apt install poppler-utils`).
 
 ```bash
-uv pip install "literature-verifier @ git+https://github.com/OWNER/literature-verifier"
+uv pip install "literature-verifier @ git+https://github.com/jakoraner/literature-verifier"
 cd my-thesis
 cat > litverify.toml <<'EOF'
 tex = ["chapters/*.tex", "main.tex"]
