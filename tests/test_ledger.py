@@ -108,3 +108,26 @@ def test_decision_needs_current_check_and_is_cleared_on_new_verdict(project: Pat
     main(["-C", str(project), "record", "C0003", "--verdict", "SUPPORTED", "--by", "t",
           "--page", "357", "--excerpt", "primary array"])
     assert rows(project)["C0003"]["decision"] == ""
+
+
+def test_parallel_records_do_not_lose_rows(project: Path, pdfs: Path):
+    import threading
+
+    main(["-C", str(project), "sync"])
+    jobs = [("C0001", "357", "primary array"), ("C0002", "1", "numerical routines"),
+            ("C0004", "1", "building blocks")]
+    codes: list[int] = []
+
+    def go(cid: str, page: str, ex: str) -> None:
+        codes.append(main(["-C", str(project), "record", cid, "--verdict", "SUPPORTED",
+                           "--by", "t", "--page", page, "--excerpt", ex]))
+
+    threads = [threading.Thread(target=go, args=j) for j in jobs]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert codes == [0, 0, 0]
+    r = rows(project)
+    assert all(r[c]["verdict"] == "SUPPORTED" for c, _, _ in jobs)
+    assert not (project / "citations.csv.lock").exists()

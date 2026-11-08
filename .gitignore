@@ -10,3 +10,4 @@ build/
 *.pdf
 .litverify/
 litverify-report/
+*.lock

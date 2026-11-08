@@ -17,10 +17,14 @@ verification or human columns.
 
 from __future__ import annotations
 
+import contextlib
 import csv
 import datetime as dt
 import difflib
+import os
+import time
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
 
 from . import VERDICTS
@@ -39,6 +43,29 @@ NEEDS_PASSAGE = ("SUPPORTED", "PARTLY", "WRONG_VERSION")
 
 def today() -> str:
     return dt.date.today().isoformat()
+
+
+@contextlib.contextmanager
+def locked(path: Path, timeout: float = 60.0) -> Iterator[None]:
+    """Exclusive lock (``<path>.lock``) around a read-modify-write of a CSV, so parallel
+    agents running ``litverify record`` cannot overwrite each other's rows."""
+    lock = path.with_name(path.name + ".lock")
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            break
+        except FileExistsError:
+            if time.monotonic() > deadline:
+                raise TimeoutError(f"{lock} is held; remove it if no litverify runs") from None
+            time.sleep(0.05)
+    try:
+        os.write(fd, str(os.getpid()).encode())
+        yield
+    finally:
+        os.close(fd)
+        lock.unlink(missing_ok=True)
 
 
 def load(path: Path) -> list[dict[str, str]]:

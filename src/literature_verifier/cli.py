@@ -300,6 +300,8 @@ def build_parser() -> argparse.ArgumentParser:
     return ap
 
 
+WRITERS = {"sync", "record", "decide", "review", "meta"}
+
 COMMANDS = {"sync": cmd_sync, "pdfs": cmd_pdfs, "meta": cmd_meta, "report": cmd_report,
             "check": cmd_check, "obtain": cmd_obtain, "locate": cmd_locate,
             "record": cmd_record, "decide": cmd_decide, "review": cmd_review}
@@ -309,7 +311,11 @@ def main(argv: list[str] | None = None) -> int:
     a = build_parser().parse_args(argv)
     if not Path(a.root).is_dir():
         raise SystemExit(f"not a directory: {a.root}")
-    return COMMANDS[a.cmd](Project(a.root), a)
+    p = Project(a.root)
+    if a.cmd in WRITERS:
+        with L.locked(p.cfg.ledger_path):
+            return COMMANDS[a.cmd](p, a)
+    return COMMANDS[a.cmd](p, a)
 
 
 if __name__ == "__main__":
