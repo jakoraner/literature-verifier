@@ -1,0 +1,181 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1038/s41586-020-2649-2",
+  "title": [
+   "Array programming with NumPy"
+  ],
+  "subtitle": [],
+  "author": [
+   {
+    "given": "Charles R.",
+    "family": "Harris",
+    "sequence": "first"
+   },
+   {
+    "given": "K. Jarrod",
+    "family": "Millman",
+    "sequence": "additional"
+   },
+   {
+    "given": "Stéfan J.",
+    "family": "van der Walt",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ralf",
+    "family": "Gommers",
+    "sequence": "additional"
+   },
+   {
+    "given": "Pauli",
+    "family": "Virtanen",
+    "sequence": "additional"
+   },
+   {
+    "given": "David",
+    "family": "Cournapeau",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric",
+    "family": "Wieser",
+    "sequence": "additional"
+   },
+   {
+    "given": "Julian",
+    "family": "Taylor",
+    "sequence": "additional"
+   },
+   {
+    "given": "Sebastian",
+    "family": "Berg",
+    "sequence": "additional"
+   },
+   {
+    "given": "Nathaniel J.",
+    "family": "Smith",
+    "sequence": "additional"
+   },
+   {
+    "given": "Robert",
+    "family": "Kern",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matti",
+    "family": "Picus",
+    "sequence": "additional"
+   },
+   {
+    "given": "Stephan",
+    "family": "Hoyer",
+    "sequence": "additional"
+   },
+   {
+    "given": "Marten H.",
+    "family": "van Kerkwijk",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matthew",
+    "family": "Brett",
+    "sequence": "additional"
+   },
+   {
+    "given": "Allan",
+    "family": "Haldane",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jaime Fernández",
+    "family": "del Río",
+    "sequence": "additional"
+   },
+   {
+    "given": "Mark",
+    "family": "Wiebe",
+    "sequence": "additional"
+   },
+   {
+    "given": "Pearu",
+    "family": "Peterson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Pierre",
+    "family": "Gérard-Marchant",
+    "sequence": "additional"
+   },
+   {
+    "given": "Kevin",
+    "family": "Sheppard",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tyler",
+    "family": "Reddy",
+    "sequence": "additional"
+   },
+   {
+    "given": "Warren",
+    "family": "Weckesser",
+    "sequence": "additional"
+   },
+   {
+    "given": "Hameer",
+    "family": "Abbasi",
+    "sequence": "additional"
+   },
+   {
+    "given": "Christoph",
+    "family": "Gohlke",
+    "sequence": "additional"
+   },
+   {
+    "given": "Travis E.",
+    "family": "Oliphant",
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Nature"
+  ],
+  "short-container-title": [
+   "Nature"
+  ],
+  "volume": "585",
+  "issue": "7825",
+  "page": "357-362",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     16
+    ]
+   ]
+  },
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     17
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     16
+    ]
+   ]
+  },
+  "type": "journal-article",
+  "URL": "https://doi.org/10.1038/s41586-020-2649-2"
+ }
+}

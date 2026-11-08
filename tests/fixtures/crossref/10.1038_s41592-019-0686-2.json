@@ -1,0 +1,610 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1038/s41592-019-0686-2",
+  "title": [
+   "SciPy 1.0: fundamental algorithms for scientific computing in Python"
+  ],
+  "subtitle": [],
+  "author": [
+   {
+    "given": "Pauli",
+    "family": "Virtanen",
+    "sequence": "first"
+   },
+   {
+    "given": "Ralf",
+    "family": "Gommers",
+    "sequence": "additional"
+   },
+   {
+    "given": "Travis E.",
+    "family": "Oliphant",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matt",
+    "family": "Haberland",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tyler",
+    "family": "Reddy",
+    "sequence": "additional"
+   },
+   {
+    "given": "David",
+    "family": "Cournapeau",
+    "sequence": "additional"
+   },
+   {
+    "given": "Evgeni",
+    "family": "Burovski",
+    "sequence": "additional"
+   },
+   {
+    "given": "Pearu",
+    "family": "Peterson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Warren",
+    "family": "Weckesser",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jonathan",
+    "family": "Bright",
+    "sequence": "additional"
+   },
+   {
+    "given": "Stéfan J.",
+    "family": "van der Walt",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matthew",
+    "family": "Brett",
+    "sequence": "additional"
+   },
+   {
+    "given": "Joshua",
+    "family": "Wilson",
+    "sequence": "additional"
+   },
+   {
+    "given": "K. Jarrod",
+    "family": "Millman",
+    "sequence": "additional"
+   },
+   {
+    "given": "Nikolay",
+    "family": "Mayorov",
+    "sequence": "additional"
+   },
+   {
+    "given": "Andrew R. J.",
+    "family": "Nelson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric",
+    "family": "Jones",
+    "sequence": "additional"
+   },
+   {
+    "given": "Robert",
+    "family": "Kern",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric",
+    "family": "Larson",
+    "sequence": "additional"
+   },
+   {
+    "given": "C J",
+    "family": "Carey",
+    "sequence": "additional"
+   },
+   {
+    "given": "İlhan",
+    "family": "Polat",
+    "sequence": "additional"
+   },
+   {
+    "given": "Yu",
+    "family": "Feng",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric W.",
+    "family": "Moore",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jake",
+    "family": "VanderPlas",
+    "sequence": "additional"
+   },
+   {
+    "given": "Denis",
+    "family": "Laxalde",
+    "sequence": "additional"
+   },
+   {
+    "given": "Josef",
+    "family": "Perktold",
+    "sequence": "additional"
+   },
+   {
+    "given": "Robert",
+    "family": "Cimrman",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ian",
+    "family": "Henriksen",
+    "sequence": "additional"
+   },
+   {
+    "given": "E. A.",
+    "family": "Quintero",
+    "sequence": "additional"
+   },
+   {
+    "given": "Charles R.",
+    "family": "Harris",
+    "sequence": "additional"
+   },
+   {
+    "given": "Anne M.",
+    "family": "Archibald",
+    "sequence": "additional"
+   },
+   {
+    "given": "Antônio H.",
+    "family": "Ribeiro",
+    "sequence": "additional"
+   },
+   {
+    "given": "Fabian",
+    "family": "Pedregosa",
+    "sequence": "additional"
+   },
+   {
+    "given": "Paul",
+    "family": "van Mulbregt",
+    "sequence": "additional"
+   },
+   {
+    "name": "SciPy 1.0 Contributors",
+    "sequence": "additional"
+   },
+   {
+    "given": "Aditya",
+    "family": "Vijaykumar",
+    "sequence": "additional"
+   },
+   {
+    "given": "Alessandro Pietro",
+    "family": "Bardelli",
+    "sequence": "additional"
+   },
+   {
+    "given": "Alex",
+    "family": "Rothberg",
+    "sequence": "additional"
+   },
+   {
+    "given": "Andreas",
+    "family": "Hilboll",
+    "sequence": "additional"
+   },
+   {
+    "given": "Andreas",
+    "family": "Kloeckner",
+    "sequence": "additional"
+   },
+   {
+    "given": "Anthony",
+    "family": "Scopatz",
+    "sequence": "additional"
+   },
+   {
+    "given": "Antony",
+    "family": "Lee",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ariel",
+    "family": "Rokem",
+    "sequence": "additional"
+   },
+   {
+    "given": "C. Nathan",
+    "family": "Woods",
+    "sequence": "additional"
+   },
+   {
+    "given": "Chad",
+    "family": "Fulton",
+    "sequence": "additional"
+   },
+   {
+    "given": "Charles",
+    "family": "Masson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Christian",
+    "family": "Häggström",
+    "sequence": "additional"
+   },
+   {
+    "given": "Clark",
+    "family": "Fitzgerald",
+    "sequence": "additional"
+   },
+   {
+    "given": "David A.",
+    "family": "Nicholson",
+    "sequence": "additional"
+   },
+   {
+    "given": "David R.",
+    "family": "Hagen",
+    "sequence": "additional"
+   },
+   {
+    "given": "Dmitrii V.",
+    "family": "Pasechnik",
+    "sequence": "additional"
+   },
+   {
+    "given": "Emanuele",
+    "family": "Olivetti",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric",
+    "family": "Martin",
+    "sequence": "additional"
+   },
+   {
+    "given": "Eric",
+    "family": "Wieser",
+    "sequence": "additional"
+   },
+   {
+    "given": "Fabrice",
+    "family": "Silva",
+    "sequence": "additional"
+   },
+   {
+    "given": "Felix",
+    "family": "Lenders",
+    "sequence": "additional"
+   },
+   {
+    "given": "Florian",
+    "family": "Wilhelm",
+    "sequence": "additional"
+   },
+   {
+    "given": "G.",
+    "family": "Young",
+    "sequence": "additional"
+   },
+   {
+    "given": "Gavin A.",
+    "family": "Price",
+    "sequence": "additional"
+   },
+   {
+    "given": "Gert-Ludwig",
+    "family": "Ingold",
+    "sequence": "additional"
+   },
+   {
+    "given": "Gregory E.",
+    "family": "Allen",
+    "sequence": "additional"
+   },
+   {
+    "given": "Gregory R.",
+    "family": "Lee",
+    "sequence": "additional"
+   },
+   {
+    "given": "Hervé",
+    "family": "Audren",
+    "sequence": "additional"
+   },
+   {
+    "given": "Irvin",
+    "family": "Probst",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jörg P.",
+    "family": "Dietrich",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jacob",
+    "family": "Silterra",
+    "sequence": "additional"
+   },
+   {
+    "given": "James T",
+    "family": "Webber",
+    "sequence": "additional"
+   },
+   {
+    "given": "Janko",
+    "family": "Slavič",
+    "sequence": "additional"
+   },
+   {
+    "given": "Joel",
+    "family": "Nothman",
+    "sequence": "additional"
+   },
+   {
+    "given": "Johannes",
+    "family": "Buchner",
+    "sequence": "additional"
+   },
+   {
+    "given": "Johannes",
+    "family": "Kulick",
+    "sequence": "additional"
+   },
+   {
+    "given": "Johannes L.",
+    "family": "Schönberger",
+    "sequence": "additional"
+   },
+   {
+    "given": "José Vinícius",
+    "family": "de Miranda Cardoso",
+    "sequence": "additional"
+   },
+   {
+    "given": "Joscha",
+    "family": "Reimer",
+    "sequence": "additional"
+   },
+   {
+    "given": "Joseph",
+    "family": "Harrington",
+    "sequence": "additional"
+   },
+   {
+    "given": "Juan Luis Cano",
+    "family": "Rodríguez",
+    "sequence": "additional"
+   },
+   {
+    "given": "Juan",
+    "family": "Nunez-Iglesias",
+    "sequence": "additional"
+   },
+   {
+    "given": "Justin",
+    "family": "Kuczynski",
+    "sequence": "additional"
+   },
+   {
+    "given": "Kevin",
+    "family": "Tritz",
+    "sequence": "additional"
+   },
+   {
+    "given": "Martin",
+    "family": "Thoma",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matthew",
+    "family": "Newville",
+    "sequence": "additional"
+   },
+   {
+    "given": "Matthias",
+    "family": "Kümmerer",
+    "sequence": "additional"
+   },
+   {
+    "given": "Maximilian",
+    "family": "Bolingbroke",
+    "sequence": "additional"
+   },
+   {
+    "given": "Michael",
+    "family": "Tartre",
+    "sequence": "additional"
+   },
+   {
+    "given": "Mikhail",
+    "family": "Pak",
+    "sequence": "additional"
+   },
+   {
+    "given": "Nathaniel J.",
+    "family": "Smith",
+    "sequence": "additional"
+   },
+   {
+    "given": "Nikolai",
+    "family": "Nowaczyk",
+    "sequence": "additional"
+   },
+   {
+    "given": "Nikolay",
+    "family": "Shebanov",
+    "sequence": "additional"
+   },
+   {
+    "given": "Oleksandr",
+    "family": "Pavlyk",
+    "sequence": "additional"
+   },
+   {
+    "given": "Per A.",
+    "family": "Brodtkorb",
+    "sequence": "additional"
+   },
+   {
+    "given": "Perry",
+    "family": "Lee",
+    "sequence": "additional"
+   },
+   {
+    "given": "Robert T.",
+    "family": "McGibbon",
+    "sequence": "additional"
+   },
+   {
+    "given": "Roman",
+    "family": "Feldbauer",
+    "sequence": "additional"
+   },
+   {
+    "given": "Sam",
+    "family": "Lewis",
+    "sequence": "additional"
+   },
+   {
+    "given": "Sam",
+    "family": "Tygier",
+    "sequence": "additional"
+   },
+   {
+    "given": "Scott",
+    "family": "Sievert",
+    "sequence": "additional"
+   },
+   {
+    "given": "Sebastiano",
+    "family": "Vigna",
+    "sequence": "additional"
+   },
+   {
+    "given": "Stefan",
+    "family": "Peterson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Surhud",
+    "family": "More",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tadeusz",
+    "family": "Pudlik",
+    "sequence": "additional"
+   },
+   {
+    "given": "Takuya",
+    "family": "Oshima",
+    "sequence": "additional"
+   },
+   {
+    "given": "Thomas J.",
+    "family": "Pingel",
+    "sequence": "additional"
+   },
+   {
+    "given": "Thomas P.",
+    "family": "Robitaille",
+    "sequence": "additional"
+   },
+   {
+    "given": "Thomas",
+    "family": "Spura",
+    "sequence": "additional"
+   },
+   {
+    "given": "Thouis R.",
+    "family": "Jones",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tim",
+    "family": "Cera",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tim",
+    "family": "Leslie",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tiziano",
+    "family": "Zito",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tom",
+    "family": "Krauss",
+    "sequence": "additional"
+   },
+   {
+    "given": "Utkarsh",
+    "family": "Upadhyay",
+    "sequence": "additional"
+   },
+   {
+    "given": "Yaroslav O.",
+    "family": "Halchenko",
+    "sequence": "additional"
+   },
+   {
+    "given": "Yoshiki",
+    "family": "Vázquez-Baeza",
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Nature Methods"
+  ],
+  "short-container-title": [
+   "Nat Methods"
+  ],
+  "volume": "17",
+  "issue": "3",
+  "page": "261-272",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     3
+    ]
+   ]
+  },
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     3,
+     2
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     3
+    ]
+   ]
+  },
+  "type": "journal-article",
+  "URL": "https://doi.org/10.1038/s41592-019-0686-2"
+ }
+}

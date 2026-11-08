@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "literature-verifier"
+version = "0.1.0"
+description = "Check that every citation in a LaTeX project is backed by a PDF in hand, a located passage and correct bibliographic metadata."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Jacob Hoffmann" }]
+requires-python = ">=3.11"
+dependencies = ["pypdf>=4.0"]
+keywords = ["latex", "bibtex", "citations", "zotero", "crossref", "research-integrity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Text Processing :: Markup :: LaTeX",
+    "Intended Audience :: Science/Research",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+litverify = "literature_verifier.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/literature_verifier"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+testpaths = ["tests"]

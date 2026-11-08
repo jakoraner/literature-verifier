@@ -1,0 +1,307 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1038/sdata.2016.18",
+  "title": [
+   "The FAIR Guiding Principles for scientific data management and stewardship"
+  ],
+  "subtitle": [],
+  "author": [
+   {
+    "given": "Mark D.",
+    "family": "Wilkinson",
+    "sequence": "first"
+   },
+   {
+    "given": "Michel",
+    "family": "Dumontier",
+    "sequence": "additional"
+   },
+   {
+    "given": "IJsbrand Jan",
+    "family": "Aalbersberg",
+    "sequence": "additional"
+   },
+   {
+    "given": "Gabrielle",
+    "family": "Appleton",
+    "sequence": "additional"
+   },
+   {
+    "given": "Myles",
+    "family": "Axton",
+    "sequence": "additional"
+   },
+   {
+    "given": "Arie",
+    "family": "Baak",
+    "sequence": "additional"
+   },
+   {
+    "given": "Niklas",
+    "family": "Blomberg",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jan-Willem",
+    "family": "Boiten",
+    "sequence": "additional"
+   },
+   {
+    "given": "Luiz Bonino",
+    "family": "da Silva Santos",
+    "sequence": "additional"
+   },
+   {
+    "given": "Philip E.",
+    "family": "Bourne",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jildau",
+    "family": "Bouwman",
+    "sequence": "additional"
+   },
+   {
+    "given": "Anthony J.",
+    "family": "Brookes",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tim",
+    "family": "Clark",
+    "sequence": "additional"
+   },
+   {
+    "given": "Mercè",
+    "family": "Crosas",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ingrid",
+    "family": "Dillo",
+    "sequence": "additional"
+   },
+   {
+    "given": "Olivier",
+    "family": "Dumon",
+    "sequence": "additional"
+   },
+   {
+    "given": "Scott",
+    "family": "Edmunds",
+    "sequence": "additional"
+   },
+   {
+    "given": "Chris T.",
+    "family": "Evelo",
+    "sequence": "additional"
+   },
+   {
+    "given": "Richard",
+    "family": "Finkers",
+    "sequence": "additional"
+   },
+   {
+    "given": "Alejandra",
+    "family": "Gonzalez-Beltran",
+    "sequence": "additional"
+   },
+   {
+    "given": "Alasdair J.G.",
+    "family": "Gray",
+    "sequence": "additional"
+   },
+   {
+    "given": "Paul",
+    "family": "Groth",
+    "sequence": "additional"
+   },
+   {
+    "given": "Carole",
+    "family": "Goble",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jeffrey S.",
+    "family": "Grethe",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jaap",
+    "family": "Heringa",
+    "sequence": "additional"
+   },
+   {
+    "given": "Peter A.C",
+    "family": "’t Hoen",
+    "sequence": "additional"
+   },
+   {
+    "given": "Rob",
+    "family": "Hooft",
+    "sequence": "additional"
+   },
+   {
+    "given": "Tobias",
+    "family": "Kuhn",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ruben",
+    "family": "Kok",
+    "sequence": "additional"
+   },
+   {
+    "given": "Joost",
+    "family": "Kok",
+    "sequence": "additional"
+   },
+   {
+    "given": "Scott J.",
+    "family": "Lusher",
+    "sequence": "additional"
+   },
+   {
+    "given": "Maryann E.",
+    "family": "Martone",
+    "sequence": "additional"
+   },
+   {
+    "given": "Albert",
+    "family": "Mons",
+    "sequence": "additional"
+   },
+   {
+    "given": "Abel L.",
+    "family": "Packer",
+    "sequence": "additional"
+   },
+   {
+    "given": "Bengt",
+    "family": "Persson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Philippe",
+    "family": "Rocca-Serra",
+    "sequence": "additional"
+   },
+   {
+    "given": "Marco",
+    "family": "Roos",
+    "sequence": "additional"
+   },
+   {
+    "given": "Rene",
+    "family": "van Schaik",
+    "sequence": "additional"
+   },
+   {
+    "given": "Susanna-Assunta",
+    "family": "Sansone",
+    "sequence": "additional"
+   },
+   {
+    "given": "Erik",
+    "family": "Schultes",
+    "sequence": "additional"
+   },
+   {
+    "given": "Thierry",
+    "family": "Sengstag",
+    "sequence": "additional"
+   },
+   {
+    "given": "Ted",
+    "family": "Slater",
+    "sequence": "additional"
+   },
+   {
+    "given": "George",
+    "family": "Strawn",
+    "sequence": "additional"
+   },
+   {
+    "given": "Morris A.",
+    "family": "Swertz",
+    "sequence": "additional"
+   },
+   {
+    "given": "Mark",
+    "family": "Thompson",
+    "sequence": "additional"
+   },
+   {
+    "given": "Johan",
+    "family": "van der Lei",
+    "sequence": "additional"
+   },
+   {
+    "given": "Erik",
+    "family": "van Mulligen",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jan",
+    "family": "Velterop",
+    "sequence": "additional"
+   },
+   {
+    "given": "Andra",
+    "family": "Waagmeester",
+    "sequence": "additional"
+   },
+   {
+    "given": "Peter",
+    "family": "Wittenburg",
+    "sequence": "additional"
+   },
+   {
+    "given": "Katherine",
+    "family": "Wolstencroft",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jun",
+    "family": "Zhao",
+    "sequence": "additional"
+   },
+   {
+    "given": "Barend",
+    "family": "Mons",
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Scientific Data"
+  ],
+  "short-container-title": [
+   "Sci Data"
+  ],
+  "volume": "3",
+  "issue": "1",
+  "article-number": "160018",
+  "issued": {
+   "date-parts": [
+    [
+     2016,
+     3,
+     15
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2016,
+     3,
+     15
+    ]
+   ]
+  },
+  "type": "journal-article",
+  "URL": "https://doi.org/10.1038/sdata.2016.18"
+ }
+}

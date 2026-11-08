@@ -1,0 +1,13 @@
+# literature-verifier configuration for this example project.
+tex = ["*.tex"]
+bib = "references.bib"          # in a real project: the Better BibTeX auto-export
+ledger = "citations.csv"
+metadata = "metadata.csv"
+pdf_dirs = ["pdfs"]             # save PDFs here as <citekey>.pdf (git-ignored)
+
+[zotero]
+local_api = false               # true: also find PDFs through Zotero desktop
+
+[obtain]
+unpaywall_email = ""            # set YOUR address to enable open-access lookup
+library_link = ""               # see docs/library-links.md
