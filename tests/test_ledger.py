@@ -37,11 +37,11 @@ def test_rewording_keeps_row_but_makes_it_stale(project: Path, pdfs: Path):
     assert main(["-C", str(project), "record", "C0001", "--verdict", "SUPPORTED", "--by", "t",
                  "--page", "357", "--excerpt", "the primary array programming library"]) == 0
     tex = project / "main.tex"
-    tex.write_text(tex.read_text().replace("the core array programming library",
-                                           "the primary array programming library"))
+    tex.write_text(tex.read_text().replace("the primary array programming library",
+                                           "the only array programming library"))
     main(["-C", str(project), "sync"])
     r = rows(project)["C0001"]
-    assert r["verdict"] == "SUPPORTED" and "primary" in r["sentence"]
+    assert r["verdict"] == "SUPPORTED" and "only" in r["sentence"]
     assert L.is_stale(r)
 
 
@@ -50,7 +50,7 @@ def test_rewrite_makes_new_row_and_marks_old_removed_then_revives(project: Path)
     tex = project / "main.tex"
     original = tex.read_text()
     tex.write_text(original.replace(
-        "NumPy is the core array programming library for Python",
+        "NumPy is the primary array programming library for Python",
         "Completely different wording about arrays in many languages and tools"))
     main(["-C", str(project), "sync"])
     r = rows(project)
