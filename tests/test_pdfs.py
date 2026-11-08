@@ -37,6 +37,10 @@ def test_resolve_from_zotero_local_api(project: Path, tmp_path: Path):
                                "contentType": "application/pdf"},
          "links": {"enclosure": {"href": pdf.as_uri()}}},
         {"key": "N1", "data": {"itemType": "note", "parentItem": "P1"}},
+        {"key": "P2", "data": {"itemType": "book", "citationKey": "linked2020"}},
+        {"key": "A2", "data": {"itemType": "attachment", "parentItem": "P2",
+                               "linkMode": "linked_url", "contentType": "application/pdf",
+                               "url": pdf.as_uri()}},
     ]
     asked = []
 
@@ -46,6 +50,7 @@ def test_resolve_from_zotero_local_api(project: Path, tmp_path: Path):
 
     r = PdfResolver(load(project), {}, zotero_fetch=fake)
     assert r.resolve("harris2020array") == (pdf, "zotero")
+    assert r.resolve("linked2020") == (pdf, "zotero")
     assert asked[0].startswith("http://localhost:23119/api/users/0/items")
 
     def down(url: str):

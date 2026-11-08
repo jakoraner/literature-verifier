@@ -4,7 +4,8 @@
 2. the ``file`` field of the bib entry (Better BibTeX can export attachment paths);
 3. Zotero desktop's local API (``http://localhost:23119/api/``, Zotero 7 with "Allow other
    applications on this computer to communicate with Zotero" enabled): the item whose
-   citation key matches, and its first PDF attachment's ``links.enclosure`` file URL.
+   citation key matches (Zotero 7 ``citationKey`` field), and its first PDF attachment that
+   is a stored file, a linked file, or a link to a ``file://`` URL.
 
 Only files that exist on disk count. A key with no PDF fails rule R3 in ``check``.
 """
@@ -27,6 +28,18 @@ ZoteroFetch = Callable[[str], list[dict]]
 def _zotero_fetch(url: str) -> list[dict]:
     with urllib.request.urlopen(url, timeout=20) as r:
         return json.load(r)
+
+
+def _attachment_paths(item: dict) -> list[Path]:
+    """Local paths a Zotero PDF attachment may point at: a stored file (``links.enclosure``),
+    a linked file (``data.path``) or a link to a ``file://`` URL (``data.url``)."""
+    d = item.get("data", {})
+    urls = [item.get("links", {}).get("enclosure", {}).get("href", ""), d.get("url", "")]
+    out = [Path(urllib.parse.unquote(urllib.parse.urlparse(u).path))
+           for u in urls if u.startswith("file://")]
+    if d.get("linkMode") == "linked_file" and d.get("path", "").startswith("/"):
+        out.append(Path(d["path"]))
+    return out
 
 
 class PdfResolver:
@@ -85,12 +98,12 @@ class PdfResolver:
             if d.get("itemType") != "attachment" or d.get("contentType") != "application/pdf":
                 continue
             ck = keys.get(d.get("parentItem", ""), "")
-            href = i.get("links", {}).get("enclosure", {}).get("href", "")
-            if not ck or ck in self._zotero or not href.startswith("file://"):
+            if not ck or ck in self._zotero:
                 continue
-            p = Path(urllib.parse.unquote(urllib.parse.urlparse(href).path))
-            if p.is_file():
-                self._zotero[ck] = p
+            for p in _attachment_paths(i):
+                if p.is_file():
+                    self._zotero[ck] = p
+                    break
         return self._zotero
 
     def resolve(self, key: str) -> tuple[Path | None, str]:
